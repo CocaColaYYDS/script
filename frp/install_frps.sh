@@ -1,8 +1,9 @@
 #!/bin/bash
 wget https://github.com/fatedier/frp/releases/download/v0.48.0/frp_0.48.0_linux_amd64.tar.gz
 tar -zxvf frp_0.48.0_linux_amd64.tar.gz
-mv tar -zxvf frp_0.48.0_linux_amd64/ /root/frp
+mv frp_0.48.0_linux_amd64/ /root/frp
 cat << 'EOF' > /root/frp/frps.ini
+[common]
 #客户端和frp服务器连接的端口
 bind_port = 7000
 #仪表盘端口（网页端可视化页面）
